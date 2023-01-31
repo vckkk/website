@@ -1,0 +1,36 @@
+.banner{
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  background-image:url("../../../public/images/banner1.jpg");
+  background-size: cover;
+
+  h1 {
+    font-size: 48px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image:url("../../../public/images/banner3.jpg");
+  }
+
+  .radius {
+    width: 600px;
+    height: 600px;
+    border-radius: 600px 0 0 0;
+    background-image:url("../../../public/images/banner3.jpg");
+
+    background-size: cover;
+  }
+
+  .innerRadius {
+    width: 600px;
+    height: 600px;
+    border-radius: 600px 0 0 0;
+    background-position: top;
+    background-image:url("../../../public/images/banner1.jpg");
+    transform: translate(60px, 0px);
+  }
+}
