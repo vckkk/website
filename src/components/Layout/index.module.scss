@@ -3,13 +3,23 @@
   height: 100vh;
   background-color: #fff;
   padding-bottom: 140px;
+
   .headMenu {
-    text-align: right;
+    padding-top:40px;
+    position: fixed;
+    top: 0;
+    right: 60px;
     span {
       font-size: 16px;
       font-weight: 500;
       margin-right: 16px;
     }
+  }
+  .headMenu+.innerHasBanner {
+
+  }
+  .headMenu+.innerNoBanner{
+    padding-top: 80px;
   }
 }
 .playerContainer {

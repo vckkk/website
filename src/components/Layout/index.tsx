@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import { Player } from 'shikwasa'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
+import cls from 'classnames'
 
 import styles from './index.module.scss'
-import Link from 'next/link'
+
 
 interface Props {
   children: React.ReactElement
@@ -11,6 +13,7 @@ interface Props {
 const Layout:React.FC<Props> = (props)=>{
   const playerRef = useRef(null)
   const {pathname} = useRouter()
+  const hasBanner = ['/article'].indexOf(pathname) > -1
   
   
   // useEffect(()=>{
@@ -37,7 +40,10 @@ const Layout:React.FC<Props> = (props)=>{
               <span><Link href="/about">About</Link></span>
             </div>
           }
-          {props.children}
+          <div className={cls(hasBanner ? styles.innerHasBanner : styles.innerNoBanner)}>
+            {props.children}
+          </div>
+
           {/* <div id="player-container" className={styles.playerContainer} /> */}
         </div>
 }

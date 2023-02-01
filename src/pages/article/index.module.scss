@@ -2,3 +2,19 @@
     width: 1200px;
     margin: 0 auto;
 }
+
+.allArticles {
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: 60px;
+        }
+    }
+    .articleContainer{
+       width: 1200px;
+       margin: 0 auto; 
+    }
+}
