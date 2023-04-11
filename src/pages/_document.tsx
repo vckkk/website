@@ -8,9 +8,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script>
-          {dayjs.locale('zh-cn')}
-        </script>
       </body>
     </Html>
   )
