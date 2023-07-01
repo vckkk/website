@@ -43,7 +43,9 @@ const Layout:React.FC<Props> = (props)=>{
           <div className={cls(hasBanner ? styles.innerHasBanner : styles.innerNoBanner)}>
             {props.children}
           </div>
-
+<div><a href="https://beian.miit.gov.cn">
+浙ICP备2023009994号
+</a></div>
           {/* <div id="player-container" className={styles.playerContainer} /> */}
         </div>
 }

@@ -9,20 +9,18 @@ import styles from "./index.module.scss"
 
 const Index = ({md}:any) => {
   return <div className={styles.mdContent}>
-    <ReactMarkdown 
-      children={md}  
+    <ReactMarkdown   
       remarkPlugins={[remarkGfm]}
       components={{
         code({node, inline, className, children, ...props}) {
           const match = /language-(\w+)/.exec(className || '')
           return !inline && match ? (
             <SyntaxHighlighter
-              children={String(children).replace(/\n$/, '')}
-              style={oneDark}
+              style={oneDark as any}
               language={match[1]}
               PreTag="div"
               {...props}
-            />
+            >{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
           ) : (
             <code className={className} {...props}>
               {children}
@@ -30,7 +28,7 @@ const Index = ({md}:any) => {
           )
         }
       }}
-    />
+    >{md}</ReactMarkdown>
   </div>
 }
 

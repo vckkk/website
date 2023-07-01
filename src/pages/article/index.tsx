@@ -14,9 +14,9 @@ const AllArticles = (props:any) => {
                 <h3>「该拿什么拯救自己.」</h3>
             </div>
             <div className={styles.articleContainer}>
-                {props.articles.map((item : any) => {
+                {props.articles.map((item : any, index: number) => {
                     return (
-                        <ArticleOverview {...item} />
+                        <ArticleOverview {...item} key={index} />
                     )
                 })}
             </div>
