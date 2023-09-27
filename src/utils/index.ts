@@ -66,7 +66,7 @@ export const getAllArticles = (fields: string[] = [], isHome = false) => {
     .map((item) => getPostBySlug(item, ['tags']))
     .map((entity) => entity.tags)
     .map(i => {
-      tagsReduce(i, tagsCount)
+      tagsReduce(i as any, tagsCount)
     })
     
   return {articles: which, tags: tagsCount }
