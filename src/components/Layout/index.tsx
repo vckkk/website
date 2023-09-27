@@ -15,25 +15,9 @@ const Layout:React.FC<Props> = (props)=>{
   const {pathname} = useRouter()
   const hasBanner = ['/article'].indexOf(pathname) > -1
   
-  
-  // useEffect(()=>{
-  //   playerRef.current = new Player({
-  //     container:()=>document.getElementById('player-container'),
-  //     audio:{
-  //       title:"xxxx",
-  //       src:"http://m801.music.126.net/20230131115325/c1d7000618679b23a17439fe75d109e8/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/24210385871/5d64/045e/9f23/880eb327ce53e13091d8d5a74fd3c97d.mp3",
-  //       artist:'dsa'
-  //     },
-  //     theme:'light',
-  //     fixed:{
-  //       type:'fixed',
-  //       position:'bottom'
-  //     }
-  //   })
-  // },[])
-
   return <div className={styles.layoutContainer}>
-          {pathname !== '/' && 
+          {
+          pathname !== '/' && 
             <div className={styles.headMenu}>
               <span><Link href="/">Home</Link></span>
               <span><Link href="/article">Article</Link></span>
@@ -43,9 +27,12 @@ const Layout:React.FC<Props> = (props)=>{
           <div className={cls(hasBanner ? styles.innerHasBanner : styles.innerNoBanner)}>
             {props.children}
           </div>
-<div><a href="https://beian.miit.gov.cn">
-浙ICP备2023009994号
-</a></div>
+          <div className={styles.footer}>
+            <a href="https://beian.miit.gov.cn">
+              浙ICP备2023009994号
+            </a>
+            <div>Power By Next.js</div>
+          </div>
           {/* <div id="player-container" className={styles.playerContainer} /> */}
         </div>
 }

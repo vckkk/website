@@ -3,7 +3,10 @@
   height: 100%;
   background-color: #fff;
   min-height: 100vh;
-  padding-bottom: 140px;
+  // padding-bottom: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .headMenu {
     padding-top:40px;
@@ -22,6 +25,17 @@
   .headMenu+.innerNoBanner{
     padding-top: 80px;
     height: 100%;
+  }
+
+  .footer {
+    line-height: 24px;
+    padding: 32px 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 64px;
   }
 }
 .playerContainer {

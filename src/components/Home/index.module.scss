@@ -34,3 +34,41 @@
     transform: translate(60px, 0px);
   }
 }
+.homeContainer {
+  display: flex;
+  width: 1024px;
+  margin: 0 auto;
+  .left{
+    width: 76%;
+    // color: aqua;
+  }
+  .right {
+    width: 100%;
+    margin-top: 32px;
+    margin-left: 22px;
+    .rightTop {
+      display: flex;
+      flex-wrap: wrap;
+      .tag {
+        display: inline-flex;
+        border: 1px #666 solid;
+        border-radius: 16px;
+        height: 28px;
+        line-height: 28px;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0px 12px;
+        margin: 0 2px 8px;
+        box-shadow:  0.5px 1px 1px 1px #333;
+        transition: all 0.4s;
+        &:hover {
+          box-shadow:  0.5px 1px 1px 2px #333;
+        }
+        sup {
+          line-height: 14px;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+}

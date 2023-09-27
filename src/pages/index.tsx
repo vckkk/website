@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import HomePage from '@/components/Home'
+import MusicPlayer from '@/components/MusicPlay'
+import { getAllArticles } from '@/utils'
 
-export default function Home() {
+export default function Home(props:any) {
   return (
     <>
       <Head>
@@ -11,8 +13,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <HomePage />
+        <HomePage articles={props.articles} tags={props.tags} />
       </div>
+      <MusicPlayer/>
     </>
   )
+}
+
+
+export function getStaticProps(){
+  const { articles, tags } =  getAllArticles(['slug','title','excerpt', 'date', 'display'], true)
+  return {
+      props:{
+          articles,
+          tags
+      }
+  }
 }

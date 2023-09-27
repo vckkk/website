@@ -1,5 +1,5 @@
 .article {
-    width: 1200px;
+    width: 960px;
     margin: 0 auto;
 }
 
@@ -9,12 +9,36 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-size: cover;
+        background-position: top;
         h1 {
             font-size: 60px;
         }
     }
     .articleContainer{
-       width: 1200px;
-       margin: 0 auto; 
+        width: 750px;
+        margin: 0 auto; 
+        padding-top: 48px;
+    }
+}
+
+.tag {
+    display: inline-flex;
+    border: 1px #666 solid;
+    border-radius: 16px;
+    height: 28px;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0px 12px;
+    margin: 0 2px 8px;
+    box-shadow:  0.5px 1px 1px 1px #333;
+    transition: all 0.4s;
+    &:hover {
+        box-shadow:  0.5px 1px 1px 2px #333;
+    }
+    sup {
+        line-height: 14px;
+        margin-left: 2px;
     }
 }

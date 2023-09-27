@@ -12,7 +12,7 @@ categories:
 
 介绍Flutter中的组建通信方式，是构建Flutter应用的基础
 
-<!-- more -->
+
 
 # 组件通信
 ## 父组件向子组件传递参数

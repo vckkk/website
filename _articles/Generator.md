@@ -10,7 +10,7 @@ categorise:
 
 JavaScript异步编程 ---- Generator
 
-<!-- more -->
+
 
 ## Generator语法
 `Generator`是ES6提供的一种异步编程解决方案，本质上也是一个函数。简单的从写法上来，`Generator`函数在内部定义了一些相互独立且互不影响的状态。

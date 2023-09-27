@@ -19,7 +19,6 @@ const Article = (props:Props) => {
 }
 
 export async function getStaticProps({ params }:any) {
-  console.log(params,"params");
   const post = getPostBySlug(params.slug, [
     'title',
     'date',
@@ -40,7 +39,7 @@ export async function getStaticProps({ params }:any) {
 }
 /**先执行这里 */
 export async function getStaticPaths() {
-  const articles = getAllArticles(['slug'])
+  const {articles} = getAllArticles(['slug'])
 
   return {
     paths: articles.map((item) => {

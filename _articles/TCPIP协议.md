@@ -10,5 +10,5 @@ categorise:
 
 什么是HTTP协议,什么是TCP/IP协议.
 
-<!-- more -->
+
 

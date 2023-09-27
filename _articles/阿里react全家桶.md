@@ -6,14 +6,11 @@ description: React+Redux+Redux-saga
 date: "2019-04-20"
 tags:
   - React
-  - JavaScriptr
-categorise:
+  - JavaScript
+categories:
   - Blog
 ---
 
-React开发必备技能学习
-
-<!-- more -->
 
 
 单独的reactjs只是ui构建库，只为我们解决了用户页面层的问题，并不能称之为开发框架。

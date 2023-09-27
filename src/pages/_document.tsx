@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-sync-scripts */
 import { Html, Head, Main, NextScript } from 'next/document'
 import dayjs from 'dayjs'
 
